@@ -1,4 +1,4 @@
-import "../src/styles.css";
+import "../styles/styles.css";
 import logoImg from "../src/img/logo.jpg";
 import userImg from "../src/img/user.png";
 import lectureImg from "../src/img/lectureImg.jpg";

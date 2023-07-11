@@ -11,7 +11,7 @@ function NavBar() {
 
   return (
     <Navbar bg="light" fixed="top">
-      <Navbar.Brand onClick={() => {navigate('/Home')}}><img src="../img/logo.src" /></Navbar.Brand>
+      <Navbar.Brand onClick={() => {navigate('/Home')}}>강의평가</Navbar.Brand>
       <div className="search-box-container">
         <input
           className="search-box"
@@ -26,7 +26,10 @@ function NavBar() {
           ></img>
         </button>
       </div>
-      <button className="mypage-btn">
+      <button className="mypage-btn"
+      onClick={() => {
+        navigate('/MyPage');
+      }}>
         <img
           className="mypage-btn-img"
           src={personIcon}

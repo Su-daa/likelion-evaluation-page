@@ -1,11 +1,13 @@
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
-import "./styles.css";
-import personImg from "../src/img/auditor.png";
+import "../styles/styles.css";
+import personImg from "../img/auditor.png";
+import NavBar from "../components/NavBar";
 
 function Mypage() {
   return (
     <div>
+      <NavBar />
       <div className="inforTitleBox">
         <b className="inforTitleText">나의 정보</b>
       </div>
