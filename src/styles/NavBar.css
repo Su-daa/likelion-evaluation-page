@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "nanumfont";
+  src: url(./NanumSquareRoundR.ttf);
+}
+
+:root {
+  --font-nanumfont: "nanumfont";
+}
+.navbar {
+  display: grid;
+  border-bottom: 1px solid #83c8eb;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+}
+.navbar-brand {
+  margin-left: 60px;
+  margin-right: 40px;
+}
+.search-box-container {
+  display: flex;
+  align-items: center;
+}
+.search-box {
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid #a6ddf9;
+}
+.search-box:hover {
+  border: 2px solid #a6ddf9;
+}
+.search-box:focus {
+  outline: 3px solid #a6ddf9;
+}
+.search-btn {
+  margin-left: 2px;
+  width: fit-content;
+  padding: 2px;
+  border: none;
+  background-color: #ffffff00;
+}
+.search-btn:hover {
+  border: 0.5px solid #83c8eb;
+  border-radius: 5px;
+  background-color: #b5e4fb;
+}
+.search-btn-img {
+  width: 30px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.mypage-btn {
+  border: none;
+  background-color: #ffffff00;
+  font-weight: 500;
+  font-size: large;
+  font-family: var(--font-nanumfont);
+}
+
+.mypage-btn-img {
+  width: 40px;
+  margin-right: 10px;
+}
