@@ -35,7 +35,9 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get('email'),
+      name: data.get('name'),
+      studentNum: data.get('studentNum'),
+      major: data.get('major'),
       password: data.get('password'),
     });
   };
@@ -64,7 +66,7 @@ export default function SignUp() {
                   name="name"
                   required
                   fullWidth
-                  id="firstName"
+                  id="name"
                   label="이름"
                   autoFocus
                 />
@@ -98,7 +100,7 @@ export default function SignUp() {
                   label="비밀번호"
                   type="password"
                   id="password"
-                  autoComplete="new-password"
+                  autoComplete="off"
                 />
               </Grid>
               

@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SignUp from './signup';
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, useNavigate} from "react-router-dom";
 
 function Copyright(props) {
     return (
@@ -36,11 +36,9 @@ export default function SignIn() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
     };
+
+    let navigate = useNavigate();
 
     return (
         <ThemeProvider theme={defaultTheme}>
@@ -87,13 +85,18 @@ export default function SignIn() {
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
+                            onClick={
+                               () => {
+                                navigate('/Home');
+                               }
+                            }
                         >
                             로그인
                         </Button>
 
                         <Grid container justifyContent="center">
                             <Grid item>
-                                <Link href="/signup" variant="body2">
+                                <Link href="/Signup" variant="body2">
                                     회원가입
                                 </Link>
                             </Grid>

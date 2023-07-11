@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import LogInPage from './screen/login';
-import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import LogIn from "./screen/login"
 import SignUp from './screen/signup';
-//import CustomNavBar
+import HomePage from './screen/HomePage';
+import Mypage from './screen/Mypage';
+
 
 function App() {
   return (
@@ -12,9 +12,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Home" element={<HomePage />} />
+        <Route path="/MyPage" element={<Mypage/>}/>
       </Routes>
 
+      
     </>
   );
 }
