@@ -1,13 +1,24 @@
-import Header from "./compoenets/Header";
-import Home from "./compoenets/Home";
-import NavBar from "./compoenets/NavBar";
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import LogIn from "./screen/login"
+import SignUp from './screen/signup';
+import HomePage from './screen/HomePage';
+import Mypage from './screen/Mypage';
+
+
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Header />
-      <Home />
-    </div>
+    <>
+
+      <Routes>
+        <Route path="/" element={<LogIn />} />
+        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Home" element={<HomePage />} />
+        <Route path="/MyPage" element={<Mypage/>}/>
+      </Routes>
+
+      
+    </>
   );
 }
 

@@ -3,11 +3,20 @@ import "../styles/NavBar.css";
 import searchIcon from "../img/searchicon-blue.png";
 import personIcon from "../img/personicon-blue.png";
 import { Navbar } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+  let navigate = useNavigate();
+
   return (
-    <Navbar bg="light" fixed="top">
-      <Navbar.Brand>강의평가</Navbar.Brand>
+    <Navbar id="navbar" bg="light" fixed="top">
+      <Navbar.Brand
+        onClick={() => {
+          navigate("/Home");
+        }}
+      >
+        강의평가
+      </Navbar.Brand>
       <div className="search-box-container">
         <input
           className="search-box"
@@ -22,7 +31,12 @@ function NavBar() {
           ></img>
         </button>
       </div>
-      <button className="mypage-btn">
+      <button
+        className="mypage-btn"
+        onClick={() => {
+          navigate("/MyPage");
+        }}
+      >
         <img
           className="mypage-btn-img"
           src={personIcon}
