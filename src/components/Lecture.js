@@ -1,27 +1,33 @@
 import "../styles/Home.css";
 import profileImg from "../img/profile.png";
+import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Lecture(props) {
+
+  let navigate = useNavigate();
+
   return (
     <div className="review-box-container">
       <div className="review-box">
         <img className="professor-img" src={profileImg} alt="professor-img" />
         <div>
           <div className="lecture-title-container">
-            <h2>컴퓨터와 프로그래밍1</h2>
+            <h2>{props.lecture.lecName}</h2>
           </div>
           <div className="professor-name-container">
-            <span>교수이름</span>
+            <span>{props.lecture.professor}</span>
           </div>
           <div className="lecture-num-container">
-            <span>과목번호</span>
+            <span>{props.lecture.lecCode}</span>
           </div>
           <div className="best-review-container">
             <span>best 강의평</span>
           </div>
         </div>
         <div>
-          <button type="button" className="detail-btn">
+          <button type="button" className="detail-btn" onClick={() => {
+            navigate(`/Detail/${props.lecture.lecId}`)
+          }}>
             상세보기
           </button>
         </div>
@@ -30,4 +36,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Lecture;

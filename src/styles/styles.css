@@ -1,67 +1,30 @@
+* {
+  font-family: var(--font-nanumfont);
+}
 .container {
   display: flex;
   align-items: center;
 }
-
-/*상단바*/
-.logo {
-  margin-left: 150px;
-  margin-right: 700px;
-  margin-bottom: 10px;
-}
-
-.logoImg {
-  width: 90%;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-}
-
-.searchbar {
-  background-color: #e7e7e7;
-  height: 45px;
-  width: 400px;
-  border: 0;
-  border-radius: 15px;
-  outline: none;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.user {
-  display: flex;
-  align-items: center;
-  margin-left: 60px;
-}
-
-.userImg {
-  height: 40px;
-  width: 40px;
-}
-
-.mypageButton {
-  margin-left: 5px;
-  outline: 0;
-  border: 0;
-  font-size: 15px;
-  background-color: white;
-}
-
 /*강의 상세페이지 - 강의 설명 박스*/
 .lectureBox {
-  background-color: #222529;
+  background-color: #25282c;
   height: 400px;
   width: 100%;
+  margin-top: 60px;
 }
-
+.lecture-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
 .lectureImg {
   height: 300px;
   width: 350px;
   margin: 50px;
   margin-left: 200px;
   border-radius: 5%;
+}
+.lecture-info {
+  margin-top: 50px;
 }
 
 .emphTitleBox {
@@ -81,54 +44,23 @@
 
 .detailText {
   color: aliceblue;
-  margin-left: 40px;
 }
 
-/*강의상세페이지 - navbar*/
-nav {
-  background-color: #ffffff;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  margin-left: 200px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  padding: 10px 20px;
-  color: #969696;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-color: #ffffff;
-  color: black;
-}
-
-/*강의상세페이지 - 강의평 클릭*/
-.reviewTitle {
-  margin-top: 150px;
+/*강의 상세페이지 - 강의평 박스*/
+.review-title {
+  margin-top: 60px;
   margin-left: 150px;
+}
+.review-container {
+  margin-top: 40px;
+  margin-left: 150px;
+  display: flex;
 }
 
 .reviewImg {
   height: 50px;
   width: 50px;
 }
-
-.review {
-  margin-top: 50px;
-  margin-left: 150px;
-  margin-right: 150px;
-}
-
 .speech-bubble {
   position: relative;
   background: #36c4f0;
@@ -151,33 +83,39 @@ nav ul li a:hover {
   margin-top: -13.5px;
   margin-left: -27px;
 }
-
+.btn {
+  border: none;
+  margin-top: 40px;
+  background-color: #00000000;
+}
+.edit-btn {
+  margin-left: 5px;
+}
+.delete-btn {
+  padding-left: 0px;
+}
 .hori {
   margin-top: 100px;
 }
 
 /*강의상세페이지 - 강의평 입력*/
+
 .reviewbox {
   height: 100px;
-  width: 30%;
+  width: 80%;
   margin-left: 150px;
   margin-top: 50px;
+  padding-left: 20px;
 }
 
-.reviewsubmit {
-  width: 50px;
-  margin-top: 120px;
+.submit-btn {
+  width: 80px;
+  height: 60px;
   margin-left: 10px;
-}
-
-.likeButton {
-  margin-left: -140px;
   margin-top: 80px;
-}
-
-.date {
-  margin-top: 105px;
-  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #abebff;
+  border: none;
 }
 
 /*마이페이지*/
