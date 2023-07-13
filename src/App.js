@@ -1,11 +1,27 @@
-import Evaluation from "./Evaluation";
-import Mypage from "./Mypage";
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import LogIn from "./screen/login"
+import SignUp from './screen/signup';
+import HomePage from './screen/HomePage';
+import Mypage from './screen/Mypage';
+import Evaluation from './screen/Evaluation';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <Mypage />
-    </div>
+    <>
+
+      <Routes>
+        <Route path="/" element={<LogIn />} />
+        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Home" element={<HomePage />} />
+        <Route path="/MyPage" element={<Mypage/>}/>
+        <Route path='/Detail/:id' element={<Evaluation />} />
+      </Routes>
+
+      
+    </>
   );
 }
 

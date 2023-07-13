@@ -1,0 +1,170 @@
+* {
+  font-family: var(--font-nanumfont);
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+/*강의 상세페이지 - 강의 설명 박스*/
+.lectureBox {
+  background-color: #25282c;
+  height: 400px;
+  width: 100%;
+  margin-top: 60px;
+}
+.lecture-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.lectureImg {
+  height: 300px;
+  width: 350px;
+  margin: 50px;
+  margin-left: 200px;
+  border-radius: 5%;
+}
+.lecture-info {
+  margin-top: 50px;
+}
+
+.emphTitleBox {
+  height: 30px;
+  width: 40px;
+  background-color: #36c4f0;
+  outline: 0;
+  border: 0;
+  border-radius: 10%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.titleText {
+  color: aliceblue;
+}
+
+.detailText {
+  color: aliceblue;
+}
+
+/*강의 상세페이지 - 강의평 박스*/
+.review-title {
+  margin-top: 60px;
+  margin-left: 150px;
+}
+.review-container {
+  margin-top: 40px;
+  margin-left: 150px;
+  display: flex;
+}
+
+.reviewImg {
+  height: 50px;
+  width: 50px;
+}
+.speech-bubble {
+  position: relative;
+  background: #36c4f0;
+  border-radius: 0.4em;
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 27px solid transparent;
+  border-right-color: #36c4f0;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -13.5px;
+  margin-left: -27px;
+}
+.btn {
+  border: none;
+  margin-top: 40px;
+  background-color: #00000000;
+}
+.edit-btn {
+  margin-left: 5px;
+}
+.delete-btn {
+  padding-left: 0px;
+}
+.hori {
+  margin-top: 100px;
+}
+
+/*강의상세페이지 - 강의평 입력*/
+
+.reviewbox {
+  height: 100px;
+  width: 80%;
+  margin-left: 150px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.submit-btn {
+  width: 80px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 80px;
+  border-radius: 5px;
+  background-color: #abebff;
+  border: none;
+}
+
+/*마이페이지*/
+.inforTitleBox {
+  height: 4cap;
+  width: 100px;
+  background-color: #83c8eb;
+  border-radius: 0.4em;
+  margin-left: 12%;
+  margin-top: 100px;
+  padding: 8px;
+}
+
+.inforTitleText {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.inforBox {
+  height: 350px;
+  width: 80%;
+  border: 2px solid #83c8eb;
+  border-radius: 1em;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.personImg {
+  margin: 50px;
+  height: 250px;
+  border: 1px solid #969696;
+  padding-top: 10px;
+}
+
+.inforText {
+  margin-top: 40px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+}
+
+.inforText1 {
+  font-weight: 900;
+}
+
+.inforTextButton {
+  border: 0;
+  background-color: #83c8eb;
+  border-radius: 0.9em;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+}
