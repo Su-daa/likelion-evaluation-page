@@ -1,71 +1,37 @@
-# Getting Started with Create React App
+# LikeLionHomework 7/13
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 개요
 
-## Available Scripts
+서버에서 받아온 데이터들을 Redux를 이용하여 관리하는 상황을 가정했습니다. src 폴더의 store.js에 데이터들을 저장했습니다. 그냥 연습 겸 한 번 써봤습니다. 지금 저장해 놓은 데이터는 저희가 썼던 명세서와 하단에 백엔드에서 첨부한 사진을 바탕으로 임의로 작성해 보았습니다. 추후에는 직접 받아와서 사용하게 되겠지요.<br>
 
-In the project directory, you can run:
+Home컴포넌트의 이름이 Lecture가 더 어울릴 것 같아 임의로 변경해 보았습니다.
 
-### `npm start`
+## \<Lecture>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+서버로부터 강의고유id, 강의명, 교수명, 과목번호 를 받아온 것으로 내용을 구성합니다. 별점은 지금은 사용하지 않는 것으로 얘기가 나왔지만 일단 적어는 놓았습니다.<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+마이페이지에는 로그인 시 제공받는 자신의 강의가 담긴 배열에, 메인페이지에는 추천강의가 담긴 배열에 map함수를 사용하여 구현했습니다.<br>
 
-### `npm test`
+상세보기 버튼에는 해당 강의의 고유 id를 url 파라미터로 넘겨 상세페이지로 라우팅합니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 상세페이지 (\<Evaluation>)
 
-### `npm run build`
+url 파라미터를 뭘로 해야할까 고민하다가 해당 강의의 고유id를 사용하면 어떨까 생각해 보았습니다.
+useParams로 파라미터로 사용했던 해당 강의의 고유id를 받아옵니다.<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+내 강의, 추천 강의, 검색한 강의들 중에서 고유id가 매칭되는 강의를 찾아서 해당 내용으로 페이지를 구성했습니다.<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+UI는 수빈님이 수정해주신 것을 썼습니다. 감사합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 마이페이지
 
-### `npm run eject`
+노션에 첨부된 사진에서는 로그인시 제공되는 lecture 항목이 빠져있는데 아마 추후에 만들어주지 않을까요? 아무튼 로그인 시 받아오기로 했던 정보들을 userInfo에 넣어보았습니다.<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+백엔드에서 첨부해주신 사진에 나온 유저정보로 구성했습니다. 심리학과래요.<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+그러고 나서 같은 방식으로 state를 참조해서 구성하였습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 기타
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+뭔가 더 좋고 효율적인 방법이 있을 것 같은데 아직은 생각이 잘 안납니당.. 익숙해지는 과정 아닐까요 하하.. 더 찾아보겠습니다. 혹시 더 좋은 생각이 있으시면 얘기해 주시면 감사하겠습니다
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# LikeLionHomework

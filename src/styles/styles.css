@@ -120,26 +120,26 @@
 
 /*마이페이지*/
 .inforTitleBox {
-  height: 35px;
+  height: 4cap;
   width: 100px;
-  background-color: #36c4f0;
+  background-color: #83c8eb;
   border-radius: 0.4em;
-  margin-left: 6%;
-  margin-top: 50px;
+  margin-left: 12%;
+  margin-top: 100px;
+  padding: 8px;
 }
 
 .inforTitleText {
-  padding: 5px;
-  text-align: center;
   color: white;
+  margin-bottom: 50px;
 }
 
 .inforBox {
   height: 350px;
-  width: 90%;
-  border: 1px solid #969696;
+  width: 80%;
+  border: 2px solid #83c8eb;
   border-radius: 1em;
-  margin-left: 5%;
+  margin-left: 10%;
   margin-right: 5%;
 }
 
@@ -151,6 +151,20 @@
 }
 
 .inforText {
+  margin-top: 40px;
   margin-left: 70px;
   margin-bottom: 10px;
+}
+
+.inforText1 {
+  font-weight: 900;
+}
+
+.inforTextButton {
+  border: 0;
+  background-color: #83c8eb;
+  border-radius: 0.9em;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
 }

@@ -1,52 +1,18 @@
-import React, { useEffect, useState } from "react";
 import "../styles/styles.css";
 import logoImg from "../img/logo.jpg";
 import userImg from "../img/user.png";
 import lectureImg from "../img/lectureImg.jpg";
 import NavBar from "../components/NavBar";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Evaluation() {
-  let reviewList1 = [
-    {
-      reviewId: 0,
-      name: "김수빈",
-      updatedAt: "2023.07.04",
-      star: 5,
-      content: "수업이 너무 지루해",
-    },
-    {
-      reviewId: 1,
-      name: "김수빈",
-      updatedAt: "2023.07.04",
-      star: 5,
-      content: "수업이 너무 지루해1",
-    },
-    {
-      reviewId: 2,
-      name: "김수빈",
-      updatedAt: "2023.07.04",
-      star: 5,
-      content: "수업이 너무 지루해2",
-    },
-    {
-      reviewId: 3,
-      name: "김수빈",
-      updatedAt: "2023.07.04",
-      star: 5,
-      content: "수업이 너무 지루해3",
-    },
-  ];
 
-  /*
-  const [reviewList, setReviewList] = useState([]);
-
-  const getReviewList = async () => {
-    //데이터 받아오기
-  };
-
-  useEffect(() => {
-    getReviewList();
-  }, []);*/
+  const {id} = useParams();
+  
+  let lectures = useSelector((state) => state.recLectures).concat(useSelector((state) => state.userInfo).lecture).concat(useSelector((state) => state.searchedLecture));
+  let targetLecture = lectures.find((lecture) => lecture.lecId == id);
+  
 
   return (
     <div>
@@ -55,10 +21,10 @@ function Evaluation() {
         <div className="lecture-container">
           <img src={lectureImg} alt="lectureImg" className="lectureImg" />
           <div className="lecture-info">
-            <h1 className="titleText">강의 </h1>
-            <h4 className="detailText">교수명 </h4>
-            <h4 className="detailText">과목코드</h4>
-            <h4 className="detailText">강의평가</h4>
+            <h1 className="titleText">{targetLecture.lecName}</h1>
+            <h4 className="detailText">교수명 {targetLecture.professor}</h4>
+            <h4 className="detailText">과목코드 {targetLecture.lecCode}</h4>
+            <h4 className="detailText">강의평가 10개의 수강평</h4>
           </div>
         </div>
       </div>
@@ -68,16 +34,12 @@ function Evaluation() {
         <h4>총 15개</h4>
       </div>
 
-      {reviewList1.map((review) => (
-        <>
-          <div className="review-container">
-            <img src={userImg} alt="reviewImg" className="reviewImg" />
-            <span className="speech-bubble">{review.content}</span>
-            <button className="btn edit-btn">수정</button>
-            <button className="btn delete-btn">삭제</button>
-          </div>
-        </>
-      ))}
+      <div className="review-container">
+        <img src={userImg} alt="reviewImg" className="reviewImg" />
+        <span className="speech-bubble">contents</span>
+        <button className="btn edit-btn">수정</button>
+        <button className="btn delete-btn">삭제</button>
+      </div>
 
       <div className="review-input-container">
         <input
